@@ -48,6 +48,13 @@ class SalesController extends AppController
      */
     public function add()
     {
+        
+         $user = $this->Users->get($id, [
+            'contain' => []
+        ]);
+
+        
+        
         $sale = $this->Sales->newEntity();
         if ($this->request->is('post')) {
             $sale = $this->Sales->patchEntity($sale, $this->request->data);
@@ -60,6 +67,8 @@ class SalesController extends AppController
         }
         $this->set(compact('sale'));
         $this->set('_serialize', ['sale']);
+        $this->set('_serialize', ['user']);
+        $this->set('user', $user);
     }
 
     /**
