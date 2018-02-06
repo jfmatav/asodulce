@@ -60,6 +60,15 @@ $cakeDescription = 'Asodulce';
       <li>
         <?= $this->Html->link('Aguinaldo', ['controller' => 'Records', 'action' => 'aguinaldo']);?>
       </li>
+      <li>
+        <?= $this->Html->link('Productos', ['controller' => 'Products', 'action' => 'index']);?>
+      </li>
+      <li>
+        <?= $this->Html->link('Proveedores', ['controller' => 'Suppliers', 'action' => 'index']);?>
+      </li>
+      <li>
+        <?= $this->Html->link('Ventas', ['controller' => 'Sales', 'action' => 'index']);?>
+      </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
         
